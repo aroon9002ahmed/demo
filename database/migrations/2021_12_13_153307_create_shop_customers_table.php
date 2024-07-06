@@ -18,8 +18,8 @@ return new class() extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('photo')->nullable();
-            $table->enum('gender', ['male', 'female']);
-            $table->string('phone')->nullable();
+            $table->enum('gender', ['male', 'female'])->nullable();
+            $table->string('phone')->unique();
             $table->date('birthday')->nullable();
             $table->timestamps();
             $table->softDeletes();
